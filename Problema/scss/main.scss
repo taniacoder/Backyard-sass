@@ -1,0 +1,124 @@
+/*nav*/
+.navbar {
+	border-radius:0px;
+	margin-bottom: 0px;
+
+}
+.navbar-default {
+	background-color: #fff;
+	border: none;
+	border-radius: 0px;
+    padding: 0.3%;
+    height: 73px;
+}
+.navbar-brand {
+	padding: 0px;
+	img {
+	width: 90%;
+	}
+}
+
+@mixin menu () {
+	margin-left: 5px;
+	&:hover {
+	background-color: #aeaeae;
+	color: #fff;
+	border-radius: 5px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+	}
+	&:focus {
+	background-color: #2C3E50;
+	color: #fff;
+	border-radius: 5px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+	}
+}
+
+.navbar-default .navbar-nav>li>a { @include menu (); }
+
+/*BANNER*/
+
+.bg-banner {
+	background-image: url("../images/1920x665-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.trans {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.texto-banner {
+	padding-bottom:5%;
+	color: #fff;
+	line-height:2;
+	h1 {
+	font-size: 3.4em;
+	padding: 20% 0 3% 0;
+	}
+}
+.texto-banner {
+	a {
+		color: #fff;
+	}
+}
+
+
+@mixin btn () {
+	background-color: transparent;
+    border: 1.8px solid #3CB2F8;
+    border-radius:20px;
+    color: #3CB2F8;
+    display: inline-block;
+    font-size: 1.4em;
+    padding: 10px 0;
+    text-align: center;
+    width: 130px;
+    text-decoration: none !important;
+    margin: 2% 0 4% 0;
+    &:hover {
+    	background-color: #3CB2F8;
+    	color: #fff;
+    }
+}
+.btn { @include btn (); }
+
+/*seccion1*/
+section {
+	color:#8B8787;
+	line-height: 2;
+	padding: 5% 0;
+	img {
+		width: 90%;
+		margin: auto;
+	}
+} 
+
+/*seccion2*/
+.seccion2 {
+	background-color:#F6F6F6;
+	
+}
+.imagen {
+	text-align: center;
+	img {
+		padding-top:15%
+	}
+} 
+/*footer*/
+@mixin redes () {
+	background-color: transparent;
+    border: 1.5px solid #3CB2F8;
+    border-radius:50px;
+    color: #3CB2F8;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 6px 0;
+    text-align: center;
+    width: 59px;
+    text-decoration: none !important;
+}
+.redes-circles a { @include redes (); }
